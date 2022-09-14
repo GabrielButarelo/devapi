@@ -1,14 +1,12 @@
 # Teste Integração - DEVAPI
 
----
-
 ### Sobre O Projeto
 
 Esse projeto tem como objetivo realizar a integração de uma planilha do `Google Sheets` com uma conta do crm `HubSpot`, na planilha deve conter os dados de cadastro de um novo contato dentro do crm, esses dados são validados e enviados para a plataforma, onde o cadastro é realizado de forma automática.
 
 ### Colunas da Planilha
 
-| Nome da Empresa | Nome Completo | Email | Telefone | Website |
+    | Nome da Empresa | Nome Completo | Email | Telefone | Website |
 
 - O campo de email é validado para que seja aceito apenas emails corporativos (que sejam similares ao dominio do website).
 - Ao realizar o cadastro no crm apenas o primeiro e ultimo nome são enviados para a plataforma.
