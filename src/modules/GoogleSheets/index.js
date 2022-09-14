@@ -72,10 +72,9 @@ function validateEmail(email, website) {
 
 	if(!reg.test(email)) return false;
 
-	const websiteDomain = website.split('www.')[1].split('/')[0];
 	const emailDomain = email.split('@')[1];
 
-	if(websiteDomain !== emailDomain) return false;
+	if(website.indexOf(emailDomain) < 0) return false;
 
 	return true;
 }
