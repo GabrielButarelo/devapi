@@ -1,7 +1,7 @@
 const hubspot = require('@hubspot/api-client');
 const logger = require('pino')();
 
-function createClient() {
+function createHubSpotClient() {
 	const hubspotClient = new hubspot.Client({ accessToken: process.env.HUBSPOT_TOKEN });
 	return hubspotClient;
 }
@@ -24,6 +24,6 @@ async function createContacts(hubspotClient, rows) {
 }
 
 module.exports = {
-	createClient,
+	createHubSpotClient,
 	createContacts
 };

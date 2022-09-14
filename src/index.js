@@ -1,6 +1,6 @@
 require('dotenv').config();
-const GoogleSheets = require('./modules/GoogleSheets');
-const HubSpot = require('./modules/HubSpot');
+const { getSpreadSheet, getSheetRows } = require('./modules/GoogleSheets');
+const { createHubSpotClient, createContacts } = require('./modules/HubSpot');
 const logger = require('pino')();
 
 async function start() {
@@ -9,11 +9,11 @@ async function start() {
 
 		const sheetId = process.env.SHEET_ID;
 
-		const spreadSheet = await GoogleSheets.getSpreadSheet(sheetId);
-		const rows = await GoogleSheets.getSheetRows(spreadSheet);
+		const spreadSheet = await getSpreadSheet(sheetId);
+		const rows = await getSheetRows(spreadSheet);
 
-		const hubSpotClient = HubSpot.createClient();
-		await HubSpot.createContacts(hubSpotClient, rows);
+		const hubSpotClient = createHubSpotClient();
+		await createContacts(hubSpotClient, rows);
 
 		logger.info('Encerrando processo de integração');
 	} catch (error) {
