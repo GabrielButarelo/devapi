@@ -1,0 +1,22 @@
+{
+  "name": "teste-devapi",
+  "version": "1.0.0",
+  "description": "Aplicação responsável por integrar contatos do google sheets para o HubSpot CRM.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "author": "Gabriel Butarelo",
+  "license": "ISC",
+  "dependencies": {
+    "@hubspot/api-client": "^7.1.2",
+    "dotenv": "^16.0.2",
+    "google-spreadsheet": "^3.3.0",
+    "pino": "^8.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.7.1"
+  }
+}
