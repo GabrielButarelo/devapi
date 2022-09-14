@@ -22,6 +22,10 @@ Esse projeto tem como objetivo realizar a integração de uma planilha do `Googl
 - prettier
 - jest
 
+### Realizando Testes Automáticos
+
+Para realizar testes automáticos precisa apenas digitar o comando `npm run test` que ele irá inicializar os testes com o jest via npx.
+
 ### Rodando O Projeto
 
 Para rodar o projeto é necessário clonar o repositório, instalar as dependências com `npm i`, configurar o arquivo `.env` conforme as informações do próximo tópico e rodar o comando `npm start` que ao executa-lo irá iniciar o processo de integração dos contatos.

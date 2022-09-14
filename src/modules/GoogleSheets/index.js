@@ -82,5 +82,7 @@ function validateEmail(email, website) {
 
 module.exports = {
 	getSpreadSheet,
-	getSheetRows
+	getSheetRows,
+	verifyIfExistRowValues,
+	validateEmail
 };
